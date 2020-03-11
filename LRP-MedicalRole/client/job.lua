@@ -383,9 +383,9 @@ function  OpenMobileAmbulanceActionsMenu2()
 
 				             ClampGameplayCamPitch(0.0, -90.0)
 					         TriggerServerEvent("anim:revivirfastsv",target_id, playerheading, playerCoords, playerlocation)
-         
+                                                                        Citizen.Wait(15000)
 									TriggerServerEvent('esx_ambulancejob:removeItem', 'medikit')
-									--TriggerServerEvent('esx_ambulancejob:revive', GetPlayerServerId(closestPlayer))
+									TriggerServerEvent('esx_ambulancejob:revive', GetPlayerServerId(closestPlayer))
 									-- Show revive award?
                            if Config.ReviveReward > 0 then
 						   exports['mythic_notify']:DoCustomHudText('success',_U('revive_complete_award', GetPlayerName(closestPlayer), Config.ReviveReward),4500)
@@ -424,9 +424,10 @@ function  OpenMobileAmbulanceActionsMenu2()
 
 					if health > 0 or IsEntityDead(searchPlayerPed)  then
 
-					    TriggerServerEvent('ems:nuevobb',target_id, playerheading, playerCoords, playerlocation)              
+					    TriggerServerEvent('ems:nuevobb',target_id, playerheading, playerCoords, playerlocation)
+                                                                        Citizen.Wait(60000)
 									TriggerServerEvent('esx_ambulancejob:removeItem', 'medikit')
-									--TriggerServerEvent('esx_ambulancejob:revive', GetPlayerServerId(closestPlayer))
+									TriggerServerEvent('esx_ambulancejob:revive', GetPlayerServerId(closestPlayer))
                            if Config.ReviveReward > 0 then							   
 						   exports['mythic_notify']:DoCustomHudText('success',_U('revive_complete_award', GetPlayerName(closestPlayer), Config.ReviveReward),4500)
 									else								
