@@ -282,7 +282,7 @@ function  OpenMobileAmbulanceActionsMenu2()
 			    {label = 'Poner en el Vehiculo', value = 'vehiculo'},
 			    {label = 'Sacar del Vehiculo', value = 'vehiculo2'},
 
-				{label = 'Revisar Pertenencias', value = 'catearems'},
+				--{label = 'Revisar Pertenencias', value = 'catearems'},
 				{label = 'Factura', value = 'factura'}
 			}
 			ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'citizen_interaction', {
